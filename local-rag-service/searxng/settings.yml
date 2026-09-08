@@ -1,0 +1,60 @@
+use_default_settings:
+  engines:
+    remove:
+      - ahmia
+      - torch
+
+server:
+  secret_key: "fA90o8Qrqqas5IduSt5qdG2vbw7L8w"
+  image_proxy: true
+  limiter: false
+  port: 8080
+  bind_address: "0.0.0.0"
+
+search:
+  formats:
+    - html
+    - json
+
+logging:
+  version: 1
+  disable_existing_loggers: false
+  handlers:
+    console:
+      class: logging.StreamHandler
+      stream: ext://sys.stdout
+      level: INFO
+  loggers:
+    granian.access:
+      level: INFO
+      handlers: [console]
+      propagate: false
+
+engines:
+  - name: google
+    engine: google
+    shortcut: g
+    disabled: false
+  - name: bing
+    engine: bing
+    shortcut: b
+    disabled: false
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: true
+  - name: brave
+    engine: brave
+    shortcut: br
+    disabled: true
+  - name: wikidata
+    engine: wikidata
+    shortcut: wd
+    disabled: true
+  - name: startpage
+    engine: startpage
+    shortcut: sp
+    disabled: true
+
+general:
+  debug: false

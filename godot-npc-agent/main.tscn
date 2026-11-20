@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://x6uxni4135mi"]
+
+[ext_resource type="Script" uid="uid://bkcm1ffg5mp1o" path="res://npc_body.gd" id="1_ig7tw"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_02ktt"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_02ktt"]
+size = Vector2(22, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_02ktt"]
+size = Vector3(20, 4, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_02ktt"]
+size = Vector3(20, 4, 1)
+
+[sub_resource type="Environment" id="Environment_02ktt"]
+ssao_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_k14jk"]
+size = Vector2(22, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k14jk"]
+size = Vector3(22, 0, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ym3rx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_k14jk"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_02ktt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k14jk"]
+
+[node name="Node3D" type="Node3D" unique_id=890166521]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=820401433]
+
+[node name="FloorCollider" type="CollisionShape3D" parent="Floor" unique_id=871543553]
+shape = SubResource("WorldBoundaryShape3D_02ktt")
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Floor" unique_id=442208293]
+mesh = SubResource("PlaneMesh_02ktt")
+
+[node name="BorderA1" type="StaticBody3D" parent="." unique_id=599337345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -9.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BorderA1" unique_id=1162033248]
+shape = SubResource("BoxShape3D_02ktt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BorderA1" unique_id=1424239786]
+mesh = SubResource("BoxMesh_02ktt")
+
+[node name="BorderA2" type="StaticBody3D" parent="." unique_id=1526916274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 9.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BorderA2" unique_id=163995551]
+shape = SubResource("BoxShape3D_02ktt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BorderA2" unique_id=186235184]
+mesh = SubResource("BoxMesh_02ktt")
+
+[node name="BorderA3" type="StaticBody3D" parent="." unique_id=162862521]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.5, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BorderA3" unique_id=1110656020]
+shape = SubResource("BoxShape3D_02ktt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BorderA3" unique_id=1637339410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3711367e-08, 0, -1)
+mesh = SubResource("BoxMesh_02ktt")
+
+[node name="BorderA4" type="StaticBody3D" parent="." unique_id=1230614593]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BorderA4" unique_id=1188978157]
+shape = SubResource("BoxShape3D_02ktt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BorderA4" unique_id=911159202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3711367e-08, 0, -1)
+mesh = SubResource("BoxMesh_02ktt")
+
+[node name="MainCamera" type="Camera3D" parent="." unique_id=1019347676]
+transform = Transform3D(0.7037278, 0.25602, -0.6627375, 0, 0.93281597, 0.36035314, 0.7104697, -0.25359052, 0.6564485, -9.603693, 2.7015328, 8.612543)
+current = true
+fov = 61.321278
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=307384544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4221382, -0.033505917)
+shadow_enabled = true
+omni_range = 10.361259
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=168798554]
+environment = SubResource("Environment_02ktt")
+
+[node name="Ceiling" type="StaticBody3D" parent="." unique_id=1797364702]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling" unique_id=192373290]
+mesh = SubResource("PlaneMesh_k14jk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling" unique_id=887685964]
+shape = SubResource("BoxShape3D_k14jk")
+
+[node name="Box" type="RigidBody3D" parent="." unique_id=306136317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9503498, 0.5, -3.9152787)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box" unique_id=2046999022]
+shape = SubResource("BoxShape3D_ym3rx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Box" unique_id=997311263]
+mesh = SubResource("BoxMesh_k14jk")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1408190188]
+offset_left = 753.0
+offset_top = 11.0
+offset_right = 1130.0
+offset_bottom = 263.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=106282390]
+handle_input_locally = false
+size = Vector2i(377, 252)
+render_target_update_mode = 4
+
+[node name="NpcBody" type="CharacterBody3D" parent="SubViewportContainer/SubViewport" unique_id=1038730439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_ig7tw")
+
+[node name="NpcMesh" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/NpcBody" unique_id=1752877218]
+mesh = SubResource("CapsuleMesh_02ktt")
+
+[node name="NpcCollider" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/NpcBody" unique_id=940151650]
+shape = SubResource("CapsuleShape3D_k14jk")
+
+[node name="NpcCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/NpcBody" unique_id=917087221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.076027334)
+fov = 66.295876
+
+[node name="Panel" type="Panel" parent="." unique_id=204300079]
+offset_left = 753.0
+offset_top = 289.0
+offset_right = 1130.0
+offset_bottom = 636.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1516812359]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 370.0
+offset_bottom = 339.0

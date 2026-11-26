@@ -7,8 +7,8 @@ A collection of experiments across machine learning, neural networks, genetic al
 ### [Stick Walker Simulation](simulations/stick-walker)
 2D physics simulation where a bipedal ragdoll figure evolves locomotion using genetic algorithms and joint actuators.
 
-### [Neural Network Car](simulations/nn-car)
-Autonomous 2D car simulation navigating a track using raycast distance sensors and a feedforward neural network evolved across generations.
+### [Neural Network Carl](simulations/nn-carl)
+Autonomous 2D simulation navigating a track using raycast distance sensors and Carl (the feedforward neural network) evolved across generations.
 
 ### [Go LLM CLI](go-llm-cli)
 Go command-line tool for interacting with local LLMs, streaming completions, and evaluating structured responses.

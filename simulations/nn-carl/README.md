@@ -1,6 +1,6 @@
-# 2D Neural Network Car Simulation
+# 2D Neural Network Carl Simulation
 
-A lightweight in-browser neural network experiment exploring autonomous steering and vehicle control.
+A lightweight in-browser neural network experiment exploring autonomous steering and navigation with Carl the NN.
 
 ## Overview
 
